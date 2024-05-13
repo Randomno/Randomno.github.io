@@ -1,0 +1,529 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 7.0.1.0 for Windows">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>デバッグモード</title>
+<link rel="stylesheet" href="../css/hpbsite.css" type="text/css">
+</head>
+<body><a name="top" id="top"></a>
+<h1>デバッグモード DBG-0</h1>
+<h2>デバッグコマンド</h2>
+<h3>ゲームオープンコマンド　09-04-28</h3>
+<ul>
+<li>ポート４にＧＣコントローラーを挿してゲームを起動します。 
+</li><li>トップシーンのタイトル画面に入ります。 
+</li><li><b>ＧＣコントローラーのSTARTボタンを押します</b>。<br>⇒画面左上に「MODE:Scene 
+Debug」という文字が出てくるまで押してください。（時間が経つと消えますが、問題ありません）
+  </li><li><b>GCコントローラのXボタンを押して</b>デバッグモード状態にしてください。（画面右上に「<b>D</b>」と表示されます)
+  </li><li>次にＧＣコントローラーの<b>Ｌボタンを押すと、オープンしていないモードがNew無しでオープン</b>されます。わかりやすいように（？）ＳＥを鳴らしてます。 
+</li><li>全オープンコマンドと同じタイミングで、ＧＣコントローラーの<b>Ｒボタンを押すとチャンバラ組み手と遊覧飛行のステージ全オープン</b>になります。</li>
+</ul>
+<blockquote>＜注意点＞<br>このオープンコマンドでは、実際にＮＡＮＤには書き込まれず、メモリの中だけが書き換わっています。そのため、通常のセーブ処理に入る前にリセットしたり、Ｗｉｉメニューに戻ると、オープン前の状態に戻ります。</blockquote>
+<h3>タイム表示コマンド　09-02-16</h3>
+<ul>
+<li>タイトルロゴ表示中に　<b>A,B,下,1,2,上,-,+,-,+</b>　の順番に入力 
+</li><li>コマンド入力成功後、１０秒間だけ表示されます。 </li>
+</ul>
+<h3>シーン共通デバッグコマンド　09-04-20</h3>
+<ul>
+<li>ポート４にＧＣコントローラーを挿してゲームを起動します。
+  </li><li>ＧＣコントローラーのSTARTボタンを押します。<br>
+  ⇒画面左上に「MODE:System Debug」という文字が出てくるまで押してください。
+  </li><li>この状態で各ボタンを押すとデバッグ情報を表示することが出来ます。<br>
+  ⇒Aボタン・・・メッセージID表示<br>
+  ⇒Yボタン・・・安全フレーム枠表示<br>
+  ⇒Xボタン・・・処理バー<br>
+  ⇒Bボタン・・・コントローラ情報表示<br>
+  ⇒Rボタン・・・デバッグルートシーンへ
+</li></ul>
+<p><br>
+</p>
+<h2>デバッグルート画面　09-04-04</h2>
+<h3>■入り方</h3>
+<ol>
+  <li>GCコントローラをポート４に接続
+  </li><li>ゲーム選択画面でスタートボタンを何度か押してと画面左上の表示を "MODE:System
+Debug" にあわせる
+  </li><li>GCコントローラのRトリガーを押す
+</li></ol>
+<h3>■操作方法</h3>
+<ul>
+  <li>Wiiリモコンで操作
+  </li><li>十字ボタンで＊カーソルを移動
+  </li><li>＋ボタン（－ボタン）で、モード変更</li>
+  <li>Aボタンでシーン決定</li>
+</ul>
+<h3>■シーン選択モード</h3>
+<blockquote>
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td bgcolor="#009999" align="center"><font color="#ffffff"><b>デバッグ用のモード</b></font></td>
+      <td bgcolor="#009999" nowrap="" align="center"><font color="#ffffff"><b>内容</b></font></td>
+      <td bgcolor="#009999" align="center"><font color="#ffffff"><b>備考</b></font></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#ffffff" nowrap="">SaveDataDebug</td>
+      <td align="left" bgcolor="#ffffff">セーブデータデバッグモード</td>
+      <td align="left" bgcolor="#ffffff"></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#ffffff" nowrap="">ContestMiiDebug</td>
+      <td align="left" bgcolor="#ffffff">コンテストNPC確認モード</td>
+      <td align="left" bgcolor="#ffffff"></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#ffffff" nowrap="">MessageCheck</td>
+      <td align="left" bgcolor="#ffffff">メッセージ確認デバッグモード</td>
+      <td align="left" bgcolor="#ffffff"></td>
+    </tr>
+  </tbody>
+</table>
+</blockquote>
+<blockquote><img src="sceneSelect.gif" width="812" height="456" border="0"></blockquote>
+<h3>■共通設定モード</h3>
+<ul>
+  <li>十字の左右で各設定の切替
+</li></ul>
+<blockquote>
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td bgcolor="#009999" align="center"><font color="#ffffff"><b>名称</b></font></td>
+      <td bgcolor="#009999" nowrap="" align="center"><font color="#ffffff"><b>内容</b></font></td>
+      <td bgcolor="#009999" align="center"><font color="#ffffff"><b>備考</b></font></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#ffffff" nowrap="">A+B sequence is XXX</td>
+      <td align="left" bgcolor="#ffffff">A+B押し確認画面の出し方<br>
+      　・passed でスキップ<br>
+      　・usually　で仕様通り（各Mii一度だけ）</td>
+      <td align="left" bgcolor="#ffffff"></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#ffffff" nowrap="">XXX the Game</td>
+      <td align="left" bgcolor="#ffffff">ゲーム部分をスキップするかの設定<br>
+      　・Play で通常通り<br>
+      　・Pass でスキップ</td>
+      <td align="left" bgcolor="#ffffff"></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#ffffff" nowrap="">TV Mode xx:yy</td>
+      <td align="left" bgcolor="#ffffff">画面設定の切り替え<br>
+      　・16:9 か 4:3</td>
+      <td align="left" bgcolor="#ffffff"></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#ffffff" nowrap="">Clear SaveData and Today Best(push 1&amp;2)</td>
+      <td align="left" bgcolor="#ffffff">①、②ボタンを同時に押すとセーブデータと今日のベストスコアが消去されます</td>
+      <td align="left" bgcolor="#ffffff"></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#ffffff" nowrap="">Clear Today Best</td>
+      <td align="left" bgcolor="#ffffff">①、②ボタンを同時に押すと今日のベストスコアが消去されます</td>
+      <td align="left" bgcolor="#ffffff"></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#ffffff" nowrap="">Mpls movie is xxx</td>
+      <td align="left" bgcolor="#ffffff">モーションプラスムービーを見たかどうかの切り替え<br>
+      　・watched　で見た<br>
+      　・not watched でまだ見てない</td>
+      <td align="left" bgcolor="#ffffff"></td>
+    </tr>
+  </tbody>
+</table>
+</blockquote>
+<blockquote><img src="commonSetting.gif" width="812" height="456" border="0"></blockquote>
+<h3>■シーン設定モード</h3>
+<ul>
+  <li>十字の左右で各設定の切替
+</li></ul>
+<blockquote>
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td bgcolor="#009999" align="center"><font color="#ffffff"><b>名称</b></font></td>
+      <td bgcolor="#009999" nowrap="" align="center"><font color="#ffffff"><b>内容</b></font></td>
+      <td bgcolor="#009999" align="center"><font color="#ffffff"><b>備考</b></font></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#ffffff" nowrap="">PlayerNum：</td>
+      <td align="left" bgcolor="#ffffff">参加するプレイヤーの数</td>
+      <td align="left" bgcolor="#ffffff"></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#ffffff" nowrap="">RemoconNum：</td>
+      <td align="left" bgcolor="#ffffff">使用するリモコンの数</td>
+      <td align="left" bgcolor="#ffffff"></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#ffffff" nowrap="">GameMode:XXX</td>
+      <td align="left" bgcolor="#ffffff">起動するゲームモードを選択<br>
+      　例　チャンバラの場合<br>
+      　　　　・たんばらたいせん　⇒試合<br>
+      　　　　・いあいぎり　⇒居合い斬り<br>
+      　　　　・くみて　⇒組み手<br>
+      </td>
+      <td align="left" bgcolor="#ffffff"><b><font color="#ff3300">文字が黄色になるモードのみ有効</font></b></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#ffffff" nowrap="">StegeNo: X</td>
+      <td align="left" bgcolor="#ffffff">ステージ選択</td>
+      <td align="left" bgcolor="#ffffff">ステージがあるゲームのみ有効</td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#ffffff" nowrap="">MiiDataSrc:XXX</td>
+      <td align="left" bgcolor="#ffffff">使用するMiiの設定<br>
+      　・Default(guest) でゲストMii<br>
+      　・Official(my mii) で似顔絵ChのMiiを設定</td>
+      <td align="left" bgcolor="#ffffff"></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#ffffff" nowrap="">Player0～3</td>
+      <td align="left" bgcolor="#ffffff">各プレイヤーが使用するMiiの設定</td>
+      <td align="left" bgcolor="#ffffff">MiiDataSrc:Official(my mii)のときのみ有効</td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#ffffff" nowrap="">VSStyele：XXX</td>
+      <td align="left" bgcolor="#ffffff">対戦仕様の設定<br>
+      　・indivisual　個人戦<br>
+      　・Team　チーム戦</td>
+      <td align="left" bgcolor="#ffffff"></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#ffffff" nowrap="">Player0～3</td>
+      <td align="left" bgcolor="#ffffff">チーム戦のときの組み合わせ</td>
+      <td align="left" bgcolor="#ffffff">VSStyele：Teamのときのみ有効<br>
+      <b><font color="#ff3300">※注意！各ゲームの仕様にあわせて設定してください</font></b></td>
+    </tr>
+  </tbody>
+</table>
+</blockquote>
+<blockquote><img src="sceneSetting.gif" width="812" height="456" border="0"></blockquote>
+<p><br>
+</p>
+<h2>各ゲームのデバッグ操作</h2>
+<h3>共通操作</h3>
+<div class="wikitable">
+<blockquote>
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <th bgcolor="#009999"><font color="#ffffff">【ＧＣコン】操作</font></th>
+      <th bgcolor="#009999"><font color="#ffffff">機能</font></th>
+    </tr>
+    <tr>
+      <td bgcolor="#ffffff">　X</td>
+      <td bgcolor="#ffffff">　デバッグモードのON OFF（画面右上に「D」表示）</td>
+    </tr>
+    <tr>
+      <td bgcolor="#ffffff">　Z(デバッグモード中)</td>
+      <td bgcolor="#ffffff">　カメラON OFF（画面右上に「Cam」表示）<br>
+      　・３Ｄスティック・・・カメラ回転<br>
+      　・X/Yボタン・・・注視点までの距離の変更<br>
+      　・Ａ/Bボタン・・・上下移動<br>
+      　・Cスティック・・・平行移動</td>
+    </tr>
+  </tbody>
+</table>
+</blockquote>
+</div>
+<h3>拡張版カメラ操作　09-06-03 </h3>
+<p>●共通操作のカメラ操作にいくつか機能が追加されたモードです</p>
+<div class="wikitable">
+<blockquote>
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <th bgcolor="#009999"><font color="#ffffff">【ＧＣコン】操作</font></th>
+      <th bgcolor="#009999"><font color="#ffffff">機能</font></th>
+    </tr>
+    <tr>
+      <td bgcolor="#ffffff">準備</td>
+      <td bgcolor="#ffffff">●ゲーム中にポート４に挿したＧＣコンのSTARTを押すと,左上に,<br>
+      　「System Debug」<br>
+      　「Scene Debug」<br>
+      　という表示が交互に出ます。<br>
+      ●これを「System Debug」にしておきます。</td>
+    </tr>
+    <tr>
+      <td bgcolor="#ffffff">操作</td>
+      <td bgcolor="#ffffff">　・Ｚボタン・・・カメラON OFF<br>
+      　・３Ｄスティック・・・カメラ回転<br>
+      　・X/Yボタン・・・注視点までの距離の変更<br>
+      　・Ａ/Bボタン・・・上下移動<br>
+      　・Cスティック・・・平行移動<br>
+      　・十字キーの下・・・ＣＭ用表示のON,OFF<br>
+      　　　　　　　　　　　　　(ポーズメニューが消えたり,半透明Miiが不透明になったりします)</td>
+    </tr>
+  </tbody>
+</table>
+</blockquote>
+</div>
+<h3>各ゲームの操作 　09-05-27</h3>
+<blockquote>
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td bgcolor="#009999" align="center"><font color="#ffffff"><b>更新日</b></font></td>
+      <td bgcolor="#009999" align="center"><font color="#ffffff"><b>実装</b></font></td>
+      <td bgcolor="#009999" align="center"><font color="#ffffff"><b>ゲーム</b></font></td>
+      <td bgcolor="#009999" align="center"><font color="#ffffff"><b>操作</b></font></td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font color="#666666">4/24</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font size="-1">0427以降</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap="">チャンバラ<br>
+      居合い斬り</td>
+      <td align="left" bgcolor="#ffffff">■デバッグモード中の動作<br>
+      　【Wiiコン】<br>
+      　　・薪の設定<br>
+      　　　十字ボタンで変更</td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font color="#666666">4/24</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font size="-1">0427以降</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap="">チャンバラ<br>
+      組み手</td>
+      <td align="left" bgcolor="#ffffff">■デバッグモード中の動作<br>
+      　【Wiiコン】<br>
+      　　・無敵モード<br>
+      　　　十字ボタンの上で変更</td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font color="#ff3333"><font color="#666666"><font color="#666666">5/12</font></font></font></td>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font size="-1">0513以降</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap="">チャンバラ<br>
+      組み手</td>
+      <td align="left" bgcolor="#ffffff">■デバッグモード中の動作<br>
+      　【Wiiコン】<br>
+      　　・無敵モード<br>
+      　　　十字ボタンの上で変更<br>
+      　【ＧＣ】<br>
+      　　・デバッグ移動モードのＯＮ／ＯＦＦ切り替え（画面左上に「デバグ移動」表示）<br>
+      　　　Ｌトリガーで変更<br>
+      　　・デバッグ移動モード中にプレイヤーを移動<br>
+      　　　左スティック</td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font color="#666666">4/27</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font size="-1">0427以降</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap="">ウェイクボード</td>
+      <td align="left" bgcolor="#ffffff">■デバッグモード中の動作<br>
+      　【Wiiコン】<br>
+      　　・スピード UP/DOWN(スピードレベルを画面に表示)<br>
+      　　　十字ボタンの上で変更</td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font color="#666666"><font color="#ff3333"><font color="#666666">5/19</font></font></font></td>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font size="-1">0519以降</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap="">フリスビードッグ</td>
+      <td align="left" bgcolor="#ffffff">■デバッグモード中の動作<br>
+      　【Ｗｉｉコン】<br>
+      　　Ａと左右 /エリア変更 <br>
+      　　Ａ押さずに左右 /バルーン変更 <br>
+<br>
+      　※デバッグモード中は<br>
+      　・投球数をカウントしない<br>
+      　・いろいろなシーケンスがおかしい</td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#ffffff" nowrap=""></td>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font size="-1">0420_JR以降</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap="">アーチェリー</td>
+      <td align="left" bgcolor="#ffffff">■デバッグモード中の動作<br>
+      【ＧＣ】<br>
+　Ａ　：デバッグＯＮ/現在カーソルがある項目をＯＮ/ステージ変更の実行 <br>
+　Ｂ　：デバッグＯＦＦ/現在カーソルがある項目をＯＦＦ <br>
+　↑↓：選択項目切り替え　 <br>
+　←→：選択値切り替え　 <br>
+<br>
+　無限矢　　　 　：矢を放っても次のステージに進まない <br>
+　距離表示　　 　：矢の画面奥方向の飛距離 <br>
+　得点境界表示 　：的(マト)の上の点数境界線を表示 <br>
+　ボーナス的場所表示 　：ボーナス的の場所にハイライトがかかる <br>
+　強制ゴールデンアロー(要「やりなおす」) ：　個人戦でもゴールデンアローが出る <br>
+　得点指定　　 　：得点を強制的に上書き <br>
+　ステージ指定 　：ステージ変更 <br>
+　コース指定　 　：コース(難易度)を変更 <br>
+　風指定　　　 　：風を変更 </td>
+    </tr>
+    <tr>
+      <td bgcolor="#009999" align="center"></td>
+      <td bgcolor="#009999" align="center"></td>
+      <td bgcolor="#009999" align="center"></td>
+      <td bgcolor="#009999" align="center"></td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font color="#666666">4/30<br>
+      </font></td>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font size="-1">0416_JR以降</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap="">バスケット</td>
+      <td align="left" bgcolor="#ffffff">■デバッグモード中の動作<br>※CPUレベル表示<br>
+　・CPU = [基本レベル]＋[本気/手抜き補正](MIN:0～MAX1.5)<br>
+　　(CPUはチャンピオン戦から1.0以上の強さになります)<br>
+※シュートレベル表示<br>
+・LEVEL = [基本難易度]＋[距離難易度]<br>
+<br>
+　【Wiiコン】<br>
+　　・シュートシーンで①　　強制ゴール ON/OFF(画面左上に G 表示)<br>
+<br>
+　【GCコン】<br>
+　　・Y　　　タイマーストップ　ON/OFF</td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font color="#666666"><font color="#666666">4/27</font></font></td>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font size="-1">0427以降</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap="">ピンポン<br>
+      連続リターン</td>
+      <td align="left" bgcolor="#ffffff">■デバッグモード中の動作<br>
+      　【Wiiコン】<br>
+      　　・スコア初期値の変更（ゲーム開始時にスコアがこの値がセットされます）<br>
+      　　　十字ボタンの上下で変更</td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font color="#666666">5/19</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font size="-1">０４０８JR以降</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap="">ゴルフ</td>
+      <td align="left" bgcolor="#ffffff">■デバッグモード中の動作<br>
+      　　※デバッグモード中は何回打ってもギブアップになりません。<br>
+      <br>
+      　【Wiiコン】<br>
+      　　・－と十字キー　デバッグ移動 <br>
+      　　・－とＡ　　　　おすすめショット方向を向く<br>
+      　　・－とＢ　　　　Ｍｉｉ紹介視点 <br>
+      　　・①　　　　　　強制カップイン扱い<br>
+      <br>
+      　【GCコン 】<br>
+      　　・Y 　　　　　　カップ位置をトグル選択<br>
+      　　・Cスティック 上下　　　　風力変更<br>
+      　　・Cスティック 左右　　　　風向変更</td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font color="#666666">4/27</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font size="-1">0427以降</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap="">ボウリング</td>
+      <td align="left" bgcolor="#ffffff">■デバッグモード中の動作<br>
+　【Wiiコン】<br>
+      　　・①　　　　　　強制ピン倒し扱い<br>　【GCコン 】<br>　　・十字上下　　　　　　かべレベルを選択<br>
+　　　　　　　　　（画面上に default,Lv1,Lv2,Lv3 表示）<br>
+　　・十字左右　　　　　　かべステージ変更</td>
+    </tr>
+    <tr>
+      <td bgcolor="#009999" align="center"></td>
+      <td bgcolor="#009999" align="center"></td>
+      <td bgcolor="#009999" align="center"></td>
+      <td bgcolor="#009999" align="center"></td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font color="#666666">5/19</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font size="-1">0519以降</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap="">マリンバイク</td>
+      <td align="left" bgcolor="#ffffff">■デバッグモード中の動作<br>　【Wiiコン】<br>
+　・時間延長オブジェクトを巡回　 <br>
+　　十字ボタン上下<br>
+　・任意の転覆　 <br>
+　　1ボタン　 　<br>
+　・カメラの注視点にワープ<br>
+　　2ボタン　 　　 <br>
+<br>
+※デバッグモード中は時間カウント停止<br>
+※デバッグモード中はコースアウトしない</td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font color="#666666"><font color="#ff3333"><font color="#666666"><font color="#ff3333"><font color="#666666">5/23</font></font></font></font></font></td>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font size="-1">0523以降</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap="">カヌー</td>
+      <td align="left" bgcolor="#ffffff">■デバッグモード中の動作<br>
+      　【GC】<br>
+      　　・タイマーストップ<br>
+      　　　①ボタンを押しながらAボタンを押すとストップ/スタートの切り替え<br>
+      　　・カヌー操作<br>
+      　　　①ボタンを押しながら十字ボタン（左右：回転　前後：移動）<br>
+      　　・タイプ診断の内部情報表示<br>
+      　　　①ボタンを押しながらBボタンを押して表示の切り替え<br>
+      <br>
+      ※0424版以前は①ボタン[-]ボタンになっています。</td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font color="#666666"><font color="#ff3333"><font color="#666666"><font color="#ff3333"><b>5/27</b></font></font></font></font></td>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font size="-1">0527b以降</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap="">自転車<br>
+      ロードレース</td>
+      <td align="left" bgcolor="#ffffff">■デバッグモード中の動作<br>
+      　【Wiiコン】<br>
+      　　・タイマー停止<br>
+      　　　①ボタン＋Z<br>
+      　　・逆走無視<br>
+      　　　①ボタン＋B<br>
+      　　・ルート移動（ポイントワープ）<br>
+      　　　①ボタン＋３Dスティック上下<br>
+      　　・ペダル入力（スタミナは減りません）<br>
+      　　　①ボタン＋C<br>
+      　　・タイムアップ5秒前（１Pのみ）<br>
+      　　　①ボタン＋②ボタン<br>
+      　　・タイムアップ（１Pのみ）<br>
+      　　　①ボタン＋"-"ボタン<br>
+      　【GCコン】操作<br>
+      　　・グラフ表示切替<br>
+      　　　Aボタン・・・グラフなし→加速度→アクセル<br>
+      　　・グラフ表示対象コントローラ切り替え<br>
+      　　　Bボタン・・・コア⇔ヌンチャク<br>
+      　　・グラフ表示対象プレイヤー切り替え<br>
+      　　　十字ボタン・・・１Ｐ⇔２Ｐ<br>
+      <br>
+      ※デバッグモード中は・・・<br>・ゴールしない<br>・タイムアウトしない<br>・右下に走行ポイントＩＤを表示</td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font color="#666666">5/19</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font size="-1">0519以降</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap="">飛行機</td>
+      <td align="left" bgcolor="#ffffff">■デバッグモード中の動作<br>　【Wiiコン】<br>
+　・ランドマークを巡回<br>
+　　十字ボタン上下 　 <br>
+　・プレイ時間変更<br>
+　　十字ボタン左右<br>
+　・任意の脱出　 <br>
+　　1ボタン　 　<br>
+　・カメラの注視点にワープ<br>
+　　2ボタン　 　　 <br>
+　<br>
+※デバッグモード中は時間カウント停止<br>
+※デバッグモード中は激突しても脱出しない<br>
+※デバッグモード中の「next-&gt;」は割っていない白風船の座標</td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font color="#666666">5/13</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap=""><font size="-1">0506_JR以降</font></td>
+      <td align="center" bgcolor="#ffffff" nowrap="">スカイダイビング</td>
+      <td align="left" bgcolor="#ffffff">■デバッグモード中の動作<br>【Ｗｉｉコン】操作  機能 <br>
+　ＢとＡを両方押す 　高度を強制的に一段階下げる <br>
+<br>
+【ＧＣコン】操作  機能 <br>
+　←→　　　　　 　落下チャレンジのＮＰＣ数設定　 <br>
+　Ｂ　　　　　 　　落下ポイントの強制指定 <br>
+      　Ｙ　　　　　 　レーダー表示　（広域→詳細→非表示→広域→…の繰り返し） </td>
+    </tr>
+  </tbody>
+</table>
+</blockquote>
+<hr>
+<table width="100%">
+  <tbody>
+    <tr>
+      <td><a href="http://wii-sports2/" target="_top"><font color="#666666" size="-1">▲HOME</font></a></td>
+      <td></td>
+      <td>
+      <p align="right"><a href="#top"><font color="#666666" size="-1">▲ページの一番上へ</font></a></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<script language="JavaScript">
+<!--
+document.write("<P align=\"right\">");
+document.write("Last updated: ", document.lastModified, "<BR>");
+document.write("</p>");
+//-->
+</script><p align="right">Last updated: 05/13/2024 01:13:44<br></p>
+</body></html>
